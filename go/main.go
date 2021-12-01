@@ -3,20 +3,16 @@ package main
 import (
 	"fmt"
 
-	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/linkedlist"
+	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/queue"
 )
 
 func main() {
-	myLinkedList := linkedlist.New()
-	fmt.Println(myLinkedList)
-	myLinkedList.Prepend(5)
-	fmt.Println(myLinkedList)
-	myLinkedList.Prepend(6)
-	fmt.Println(myLinkedList)
-	myLinkedList.Prepend(2)
-	fmt.Println(myLinkedList)
-	fmt.Println(myLinkedList.Contains(5))
-	myLinkedList.DeleteWithValue(5)
-	fmt.Println(myLinkedList)
-	fmt.Println(myLinkedList.Contains(5))
+	myQueue := queue.New()
+	myQueue.Enqueue(4)
+	myQueue.Enqueue(3)
+	myQueue.Enqueue(2)
+	myQueue.Enqueue(1)
+	for !myQueue.IsEmpty() {
+		fmt.Println(myQueue.Dequeue())
+	}
 }
