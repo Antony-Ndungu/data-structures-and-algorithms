@@ -3,16 +3,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/queue"
+	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/hashmap"
 )
 
 func main() {
-	myQueue := queue.New()
-	myQueue.Enqueue(4)
-	myQueue.Enqueue(3)
-	myQueue.Enqueue(2)
-	myQueue.Enqueue(1)
-	for !myQueue.IsEmpty() {
-		fmt.Println(myQueue.Dequeue())
+	myHashmap := hashmap.NewHashmap()
+	myHashmap.Put("Antony", 1)
+	myHashmap.Put("Ndungu", 2)
+	value, ok := myHashmap.Get("Antony")
+	if ok {
+		fmt.Println(value)
 	}
 }
