@@ -3,21 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/bst"
+	"github.com/Antony-Ndungu/data-structures-and-algorithms/go/algorithms"
 )
 
 func main() {
-	tree := bst.New()
-	tree.Insert(10)
-	tree.Insert(20)
-	tree.Insert(0)
-	tree.Insert(4)
-	tree.Insert(3)
-	tree.Insert(5)
-	tree.Insert(5)
-	tree.Traverse()
-	fmt.Println("")
-	tree.Delete(10)
-	tree.Traverse()
-	fmt.Println("")
+	nums := []int{27, 4, 7, 12, 9}
+	algorithms.SelectionSort(nums)
+	fmt.Println(nums)
 }
