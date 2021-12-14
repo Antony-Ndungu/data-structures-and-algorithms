@@ -64,6 +64,10 @@ void append(list_t *listPtr, int value){
     }
 
     node_t *newNodePtr = (node_t *) malloc(sizeof(node_t));
+    if (newNodePtr == NULL){
+        printf("Failed to allocate space for new node");
+        return;
+    }
     newNodePtr->value = value;
     newNodePtr->next = NULL;
 
